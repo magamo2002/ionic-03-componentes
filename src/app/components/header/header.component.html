@@ -1,0 +1,8 @@
+<ion-header class="ion-no-border" [translucent]="true"> <!-- 'ion-no-border' para no ver la division entre encabezado y pagina, translucent: deja transparente el encabezado solo iOs-->
+  <ion-toolbar>
+    <ion-buttons slot="start">  <!-- barra de botones 'start' es para que aparezca al principio -->
+      <ion-back-button text="Regresar" defaultHref="/"></ion-back-button> <!--defaultHref="/" para forzar la aparicion del boton ATRAS-->
+    </ion-buttons>
+    <ion-title text-capitalize>{{ titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>

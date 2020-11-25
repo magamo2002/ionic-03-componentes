@@ -1,0 +1,15 @@
+<app-header titulo="Progress - Range"></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-progress-bar type="determinate" [value]="porcentaje" reversed="false" color="primary"></ion-progress-bar> <!-- al colocar entre corchetes el 'value' le decimos que queremos manejar el valor con una propiedad del componente, en este caso se llama 'porentaje'-->
+
+  <ion-list> <!-- cuando se colocan inputs se acostumbra a crear un ion list para agruparlos -->
+    <ion-item>
+      <ion-range min="0" max="100" (ionChange)="rangeChange( $event )">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+</ion-content>

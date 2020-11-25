@@ -1,0 +1,29 @@
+
+<app-header [titulo]="titalert || 'Alert Page'"></app-header> 
+<!-- 'titulo' es una variable con la cual mando un string al componente header -->
+<!-- '||' es para validar que si no viene la variable titalert con algo por defecto colocara Alert Page -->
+
+
+<!-- 
+  esto se comenta porque ahora se va a utilizar el componente HEADER creado y asi no repetir el codigo en todas las paginas
+  se copia y se pasa al componente header html
+-->
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">  -- barra de botones 'start' es para que aparezca al principio --
+      <ion-back-button text="Regresar" defaultHref="/"></ion-back-button> --defaultHref="/" para forzar la aparicion del boton ATRAS--
+    </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content>
+  <ion-button expand="full" color="primary" (click)="presentAlert()">
+    Mostrar Alerta
+  </ion-button>
+  <ion-button expand="full" color="primary" (click)="textAlert()">
+    Recibe input
+  </ion-button>
+
+</ion-content>

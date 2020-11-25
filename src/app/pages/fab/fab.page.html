@@ -1,0 +1,50 @@
+<app-header titulo="Fabs"></app-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <!-- slot="fixed" - lo deja fijo, no le afecta el scroll -->
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <!--lista de botones hacia arriba-->
+    <ion-fab-list side="top">
+      <!-- side="top" - la lista de botones aparecera hacia arriba del boton principal-->
+      <ion-fab-button>
+        <ion-icon color="facebook" name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon color="twitter" name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon color="youtube" name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <!--lista de botones hacia la izquierda-->
+    <ion-fab-list side="start">
+      <!-- side="start" - la lista de botones aparecera hacia la izquierda del boton principal-->
+      <ion-fab-button>
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-github"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let i of data; let index = index">
+      Item {{ index + 1 }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <!--esto para comprobar que el boton fab se posicionara arriba del footer-->
+  <ion-toolbar color="youtube">
+    <ion-title>Este es el footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
